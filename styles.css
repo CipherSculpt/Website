@@ -784,7 +784,7 @@ form button:hover {
 /* Mobile Styles */
 @media only screen and (max-width: 768px) {
     .contact {
-        padding-top: 80px; /* Increase padding-top for mobile */
+        padding-top: 90px; /* Increase padding-top for mobile */
     }
 
     .contact-heading {
@@ -792,11 +792,23 @@ form button:hover {
     }
 
     form {
+        width: 100%; /* Adjust the width for smaller screens */
+        max-width: 400px; /* Set a maximum width for better centering */
+        margin: auto; /* Center the form horizontally */
         padding: 20px; /* Increase padding for mobile */
+        box-sizing: border-box; /* Include padding in the width calculation */
+    }
+
+    form input,
+    form textarea {
+        width: 100%; /* Make input fields take full width on smaller screens */
+        padding: 12px;
+        margin-bottom: 20px;
+        box-sizing: border-box; /* Include padding in the width calculation */
     }
 
     form::before {
-        filter: blur(20px); /* Increase blur for mobile */
+        filter: blur(100%); /* Increase blur for mobile */
     }
 }
 

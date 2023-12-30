@@ -121,7 +121,7 @@ nav .dropdown.more > a::after {
     transition: top 0.3s; 
 }
 
-/* Additional Hero styles */
+/* Hero Section Styles */
 .hero {
     background-image: url('bg1.jpg');
     background-size: cover;
@@ -130,35 +130,39 @@ nav .dropdown.more > a::after {
     text-align: center;
     padding: 100px 0;
     margin-top: 0;
-    height: 77vh;
+    height: 70vh; /* Adjust the height as needed */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.hero .hero-container {
+.hero-container {
     max-width: 800px;
     margin: 0 auto;
-    margin-bottom: 100px;
 }
 
 .hero h1 {
     font-size: 3em;
     margin-bottom: 10px;
-    transform: scale(0.8);
-    transition: transform 1s ease-in-out, color 1s ease-in-out;
-    animation: colorChange 5s infinite;
+    font-weight: bold;
 }
 
-.hero h1.show {
-    transform: scale(1);
+.hero h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #ffffff; /* Yellow color for emphasis */
 }
 
-/* Call to Action (CTA) styles */
+.hero p {
+    font-size: 1.2em;
+    color: #ffffff; 
+    margin-bottom: 30px;
+}
+
 .cta {
     display: inline-block;
     padding: 15px 25px;
-    background-color: #333;
+    background-color: #6e8383; /* Blue color for buttons */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -167,11 +171,11 @@ nav .dropdown.more > a::after {
 }
 
 .cta + .cta {
-    margin-left: 10px; 
+    margin-left: 10px;
 }
 
 .cta:hover {
-    background-color: #555;
+    background-color: #2980b9; /* Darker blue color on hover */
     transform: scale(1.1);
 }
 
@@ -204,6 +208,7 @@ nav .dropdown.more > a::after {
 @media only screen and (max-width: 768px) {
     .hamburger-menu {
         display: block;
+        padding-bottom: 10px;
     }
 
     .line.close:nth-child(1) {
@@ -342,6 +347,43 @@ nav .dropdown.more > a::after {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Services Section Styles for Mobile */
+@media only screen and (max-width: 768px) {
+    .services-container {
+        margin: 100pxauto; /* Adjust margin for mobile */
+    }
+
+    .services-title {
+        font-size: 28px; /* Adjust font size for mobile */
+    }
+
+    .service {
+        width: 100%; /* Make the service items full width on mobile */
+        margin-bottom: 30px; /* Adjust margin for mobile */
+        box-sizing: border-box;
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    .service h3 {
+        font-size: 18px; /* Adjust font size for mobile */
+        margin-bottom: 8px; /* Adjust margin for mobile */
+    }
+
+    .service p {
+        font-size: 14px; /* Adjust font size for mobile */
+        margin-bottom: 8px; /* Adjust margin for mobile */
+    }
+
+    .service img {
+        display: none; /* Hide image on mobile */
+    }
+
+    .services-title {
+        font-size: 24px; /* Adjust font size for mobile */
+    }
+}
+
+
 /* About Us Section Styles */
 .about-us {
     text-align: center;
@@ -378,6 +420,33 @@ nav .dropdown.more > a::after {
 .about-subsection p {
     color: #666;
     line-height: 1.6;
+}
+
+@media only screen and (max-width: 768px) {
+    .about-us {
+        margin: 100px auto; /* Further adjust margin for smaller screens */
+    }
+
+    .about-us h1 {
+        font-size: 25px; /* Further adjust font size for smaller screens */
+    }
+
+    .about-us h2 {
+        font-size: 1.3em; /* Further adjust font size for smaller screens */
+    }
+
+    .about-subsection {
+        margin-bottom: 10px; /* Further adjust margin for smaller screens */
+    }
+
+    .about-subsection h2,
+    .about-subsection h3 {
+        font-size: 1.1em; /* Further adjust font size for smaller screens */
+    }
+
+    .about-subsection p {
+        font-size: 0.9em; /* Further adjust font size for smaller screens */
+    }
 }
 
 /* Portfolio Section Styles */
@@ -472,6 +541,7 @@ nav .dropdown.more > a::after {
     object-fit: contain;
 }
 
+
 /* Blog Container section */
 .blogs {
     padding: 120px 0;
@@ -534,6 +604,15 @@ nav .dropdown.more > a::after {
     transform: translateY(-5px);
 }
 
+@media only screen and (max-width: 768px) {
+    .blog-item {
+        width: 90%; /* Full width on smaller screens */
+    }
+
+    .blog-item iframe {
+        height: 140px; /* Adjust height for smaller screens */
+    }
+}
 
 /* Teams Section */
 .teams {
@@ -574,6 +653,12 @@ nav .dropdown.more > a::after {
 .member-card:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+    .member-card {
+        width: 60%; /* Full width on smaller screens */
+    }
 }
 
 
@@ -699,21 +784,22 @@ form button:hover {
 /* Mobile Styles */
 @media only screen and (max-width: 768px) {
     .contact {
-        padding-top: 60px; /* Adjust padding-top for mobile */
+        padding-top: 80px; /* Increase padding-top for mobile */
     }
 
     .contact-heading {
-        font-size: 1.5em; /* Adjust font-size for mobile */
+        font-size: 2em; /* Increase font-size for mobile */
     }
 
     form {
-        padding: 15px; /* Adjust padding for mobile */
+        padding: 20px; /* Increase padding for mobile */
     }
 
     form::before {
-        filter: blur(10px); /* Adjust blur for mobile */
+        filter: blur(20px); /* Increase blur for mobile */
     }
 }
+
 
 /* Footer Styles */
 footer {
@@ -723,33 +809,47 @@ footer {
     padding: 20px 0;
 }
 
-
 #footer-left {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#d1e2e3;
+    background-color: #d1e2e3;
+    padding: 0 15px; /* Adjust padding for mobile */
 }
 
 #footer-left .logo {
-    padding: 25px; 
-    margin-left: 0;
-    max-width: 140%;
-    max-height: 90px; 
-
+    max-width: 100%; /* Adjust as needed */
 }
 
 .social-medias {
-    order: 2; 
-    padding-right: 25px;
+    display: flex;
+    align-items: center;
 }
 
 .social-medias a {
-    margin-left: 10px; 
+    margin-left: 10px; /* Add left margin for spacing between icons */
 }
 
 @media only screen and (max-width: 768px) {
     #footer-left {
-        padding: 15px; /* Adjust padding on mobile */
+        flex-direction: row; /* Arrange items in a row on mobile */
+        align-items: center; /* Center items vertically on mobile */
+        padding: 20px 15px; /* Adjust padding for mobile */
+    }
+
+    .social-medias {
+        margin-top: 0; /* Remove top margin for spacing on mobile */
+        justify-content: flex-end; /* Align icons to the right on mobile */
+    }
+
+    .social-medias a {
+        margin: 0 5px; /* Adjust margin for spacing between icons on mobile */
+    }
+
+    .social-medias img {
+        width: 40px; /* Adjust the width of social media icons on mobile */
+        height: 40px; /* Adjust the height of social media icons on mobile */
     }
 }
+
+

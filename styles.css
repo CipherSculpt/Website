@@ -41,7 +41,7 @@ header {
 .logo img {
     max-width: 130%;
     max-height: 90px; 
-    margin-left: 20px;
+    margin-left: -10px;
 }
 
 nav ul {
@@ -696,6 +696,25 @@ form button:hover {
     background-color: #2980b9;
 }
 
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    .contact {
+        padding-top: 60px; /* Adjust padding-top for mobile */
+    }
+
+    .contact-heading {
+        font-size: 1.5em; /* Adjust font-size for mobile */
+    }
+
+    form {
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    form::before {
+        filter: blur(10px); /* Adjust blur for mobile */
+    }
+}
+
 /* Footer Styles */
 footer {
     background-color: #333;
@@ -714,7 +733,7 @@ footer {
 
 #footer-left .logo {
     padding: 25px; 
-    margin-left: 5px;
+    margin-left: 0;
     max-width: 140%;
     max-height: 90px; 
 
@@ -727,4 +746,10 @@ footer {
 
 .social-medias a {
     margin-left: 10px; 
+}
+
+@media only screen and (max-width: 768px) {
+    #footer-left {
+        padding: 15px; /* Adjust padding on mobile */
+    }
 }

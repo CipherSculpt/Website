@@ -49,10 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         Email.send({
             Host: "smtp.elasticemail.com",
-            Username: "sanathzamax@gmail.com",
-            Password: "BB985FC04551A8F53E1DE3F51EE1937A895F",
-            To: 'sanathzamax@gmail.com',
-            From: "sanathzamax@gmail.com",
+            Username: "ciphersculpt@outlook.com",
+            Password: "D6A69A012B0F582558AA741AD3E1D5040E4B",
+            To: 'ciphersculpt@outlook.com',
+            From: "ciphersculpt@outlook.com",
             Subject: "Work discussing from",
             Body: bodyMessage
         }).then((message) => handleEmailResponse(message));
